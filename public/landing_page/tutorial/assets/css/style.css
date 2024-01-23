@@ -1,0 +1,219 @@
+:root {
+    --red: #e74c3c;
+    --orange: #f39c12;
+    --white: #fff;
+    --black: #2c3e50;
+    --light-color: #888;
+    --light-bg: #eee;
+    --border: 0.1rem solid rgba(0, 0, 0, 0.2);
+}
+
+* {
+    font-family: "Nunito Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+*::-webkit-scrollbar {
+    height: 0.5rem;
+    width: 1rem;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background-image: url("../../../assets/images/background.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+section {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background-image: url(../../../assets/images/header.webp);
+    background-repeat: repeat-x;
+    font-weight: 100;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.header .flex {
+    padding: 1.5rem 2rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.header .logo {
+    font-size: 2.5rem;
+    color: var(--black);
+    font-weight: bolder;
+}
+
+.header .flex .icons {
+    background: -webkit-linear-gradient(#fefed0, #fbcd62);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.header img {
+    width: 70%;
+}
+
+@media (max-width: 768px) {
+
+    .icons {
+        text-align: right;
+    }
+
+    section {
+        padding: unset;
+    }
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+    color: #ffe000;
+}
+
+.text-logo a {
+    /* font-size: calc(1vw + 0.9rem); */
+    font-size: clamp(1.2rem, 2vw, 2rem);
+    font-weight: 500;
+}
+
+#myTab {
+    gap: 1rem;
+    margin-top: 20px;
+    border: none;
+}
+
+.mobiles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    box-shadow: 0 1px 20px 0 #757575;
+    padding: 15px;
+}
+
+.mobile {
+    background: #fff9dd;
+    border: 2px solid #e6c9a0;
+    text-align: center;
+    padding: 10px 32px 0 32px;
+}
+
+.mobile img {
+    max-width: 100%;
+}
+
+.mobile p {
+    color: #333;
+    /* font-size: 1.2rem; */
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+/* End Main */
+/* Responsive */
+@media (max-width: 1100px) {
+    .mobiles {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .mobiles {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.box {
+    flex: 1 1 15rem;
+    display: flex;
+    background: #ffe000;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    align-items: center;
+    gap: 2rem;
+    cursor: pointer;
+    font-size: 14px;
+    color: black;
+    transition: 0.3s ease-in-out;
+    border-radius: 50px;
+}
+
+.box.active,
+.box:hover {
+    background: #993d00;
+}
+
+.box .flex-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.box .box-content {
+    font-size: 1.4rem;
+    padding-left: 10px;
+    text-align: center;
+    color: #993d00;
+    font-weight: bold;
+}
+
+.box.active .box-content,
+.box:hover .box-content {
+    color: #ffffff;
+    text-shadow: none;
+}
+
+.box p {
+    margin: 0;
+}
+
+footer {
+    position: sticky;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 2.5rem 0;
+    text-align: center;
+    color: #e6dfa4;
+    font-size: 2rem;
+    margin-top: 2rem;
+}
